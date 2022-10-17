@@ -8,12 +8,25 @@ console.log(inputEl);
 const textEl = document.querySelector('#name-output');
 console.log(textEl);
 
-inputEl.addEventListener('input',onInpup);
+inputEl.addEventListener('input',onInput);
 
-function onInpup(event) {
-	const simbols = textEl.textContent = event.currentTarget.value;
-	if (simbols.length === 0) {
+//Вариант1
+// function onInput(event) {
+// 	const simbols = textEl.textContent = event.currentTarget.value;
+// 	if (simbols.length === 0) {
+// 		textEl.textContent = "Anonymous";
+// 	}
+	
+// }
+
+
+//Вариант2
+function onInput(event) {
+	
+	if (event.currentTarget.value === '') {
 		textEl.textContent = "Anonymous";
+	} else {
+		textEl.textContent = event.currentTarget.value;
 	}
 	
 }

@@ -18,16 +18,22 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+const listEl = document.querySelector('#ingredients');
 
-for (const elemnt of ingredients) {
+//Вариант 1
+// for (const element of ingredients) {
+// 	const itemEl = document.createElement('li');
+// 	itemEl.classList.add('item');
+// 	itemEl.textContent = element;
+// 	console.log(itemEl);
+// 	console.log(listEl);
+// 	listEl.append(itemEl);
+// }
+
+//Вариант 2
+const addingIng = ingredients.map(element => {
 	const itemEl = document.createElement('li');
 	itemEl.classList.add('item');
-	itemEl.textContent = elemnt;
-	console.log(itemEl);
-	const listEl = document.getElementById('ingredients');
-	console.log(listEl);
+	itemEl.textContent = element;
 	listEl.append(itemEl);
-}
-
-
-
+})

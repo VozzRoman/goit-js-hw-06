@@ -51,3 +51,4 @@ function minusBth() {
 function plusBth() {
 	valueNumber.textContent = counterValue +=1;
 }
+
