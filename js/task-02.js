@@ -30,10 +30,13 @@ const listEl = document.querySelector('#ingredients');
 // 	listEl.append(itemEl);
 // }
 
+
 //Вариант 2
 const addingIng = ingredients.map(element => {
 	const itemEl = document.createElement('li');
 	itemEl.classList.add('item');
 	itemEl.textContent = element;
-	listEl.append(itemEl);
+	return itemEl;
+	
 })
+listEl.append(...addingIng);

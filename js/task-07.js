@@ -7,7 +7,7 @@ const controlSizeRefs = document.querySelector('#font-size-control');
 console.log(controlSizeRefs);
 const textRef = document.querySelector('#text');
 
-controlSizeRefs.addEventListener('click', drugSize);
+controlSizeRefs.addEventListener('input', drugSize);
 
 function drugSize(event) {
 	console.log(event.currentTarget.value);

@@ -20,9 +20,8 @@ controlRefers[1].addEventListener('click', destroyBoxes);
 
 function createBosex() {
 	const counterBox = Number(inputResfs.value);
-	
+	const part = document.createDocumentFragment();
 	for (let i = 0; i < counterBox; i+=1) {
-	
 	boxSize += 10
 	const boxEl = document.createElement('div');
 	boxEl.style.width = boxSize + "px";
@@ -30,15 +29,16 @@ function createBosex() {
 	boxEl.style.backgroundColor = getRandomHexColor();
 	boxEl.classList.add('new-box');
 	console.log(boxEl);
-	boxesResf.append(boxEl);
+		part.append(boxEl);
+		console.log(part);
 		
 	}
-
-	
-
-
-
+	boxesResf.append(part);
 }
+
+
+
+
 function destroyBoxes() {
 	const newBoxRefs = document.querySelectorAll('.new-box');
 	for (const box of newBoxRefs) {
